@@ -1,0 +1,26 @@
+    @media print {
+        body {
+            -webkit-print-color-adjust: exact; /* Chrome */
+            print-color-adjust: exact; /* Firefox */
+        }
+
+        #printArea {
+            background-color: lightgrey; /* Your desired background color */
+            color: black; /* Ensure text is visible */
+        }
+
+        /* Hide any elements you don't want to print */
+        body * {
+            visibility: hidden;
+        }
+
+        #printArea, #printArea * {
+            visibility: visible;
+        }
+
+        #printArea {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
